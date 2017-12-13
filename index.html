@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="application/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+		<script type="application/javascript" src="index.js"></script>
+		<link rel="stylesheet" href="index.css" />
+	</head>
+	<body>
+		<h1 style="text-align: center;">Mon super Morpion</h1>
+		<div id="infos">
+			<div style="float: left;">
+				<h2></h2>
+				<p></p>
+			</div>
+			<div style="float: right;">
+				<h2></h2>
+				<p></p>
+			</div>
+		</div>
+		<div id="start">
+			<h2>Veuillez choisir vos noms de joueurs</h2>
+			<form>
+				<label for="username1">Nom du joueur 1 : </label>
+				<input id="username1" />
+				<label for="username2">Nom du joueur 2 : </label>
+				<input id="username2" />
+				<div style="margin-top: 20px;text-align: center;">
+					<button type="button" style="display:inline-block;"
+							onclick="morpion.start()">Commencer la partie</button>
+				</div>
+			</form>
+		</div>
+		<div id="morpion">
+			<table>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</table>
+		</div>
+		<div id="results">
+			<div></div>
+			<button onclick="morpion.restart()">Recommencer une partie</button>
+		</div>
+	</body>
+</html>
