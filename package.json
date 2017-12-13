@@ -1,0 +1,37 @@
+{
+  "name": "morpion",
+  "version": "0.0.1",
+  "description": "Morpion avec AngularJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "lite-server",
+    "dev": "grunt && grunt dev",
+    "start": "concurrently \"npm run dev\" \"npm run serve\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Elvynia/formation-morpion.git"
+  },
+  "keywords": [
+    "Morpion",
+    "AngularJS"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Elvynia/formation-morpion/issues"
+  },
+  "homepage": "https://github.com/Elvynia/formation-morpion#readme",
+  "dependencies": {
+    "angular": "^1.6.7",
+    "grunt": "^1.0.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-cssmin": "^2.2.1",
+    "grunt-contrib-watch": "^1.0.0"
+  },
+  "devDependencies": {
+    "lite-server": "^2.3.0",
+    "concurrently": "^3.5.1"
+  }
+}
