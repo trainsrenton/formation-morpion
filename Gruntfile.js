@@ -15,6 +15,7 @@ module.exports = function(grunt) {
 		concat: {
 			app: {
 		      src: [
+		        'node_modules/angular/angular.min.js',
 		    	'app/app.module.js',
 		    	'app/*.component.js',
 		    	'app/*.controller.js'

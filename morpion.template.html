@@ -1,0 +1,8 @@
+<table class="morpion" ng-click="$ctrl.checkWin()">
+	<tr ng-repeat="rowIndex in [0, 1, 2]">
+		<td class="morpion-cell" ng-repeat="cellIndex in [0, 1, 2]">
+			<morpion-cell index="{{ rowIndex * 3 + cellIndex }}"></morpion-cell>
+		</td>
+	</tr>
+</table>
+<h2 ng-show="$ctrl.result">Partie terminée !!</h2>

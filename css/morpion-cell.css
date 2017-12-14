@@ -1,0 +1,19 @@
+td div.red {
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	border : 3px solid red;
+	margin: auto;
+}
+
+td div.blue:before {
+	font-size: 43px;
+	font-family: sans-serif;
+	content: 'X';
+	height: 100%;
+	width: 100%;
+	display: block;
+	text-align: center;
+	color: blue;
+	line-height: 92px;
+}

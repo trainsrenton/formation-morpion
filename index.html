@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<script src="dist/app.js"></script>
+	<link rel="stylesheet" href="dist/app.min.css" />
+</head>
+<body ng-app="Morpion" ng-controller="MorpionController as ctrl">
+
+    <div class="result" ng-show="ctrl.results">
+        <h2 ng-show="!ctrl.isDraw">Le gagnant est {{ctrl.winner}}</h2>
+        <h2 ng-show="ctrl.isDraw">Match nul bande de nuls !</h2>
+    </div>
+
+	<h1 ng-show="!ctrl.playing">
+		<a href="" ng-click="ctrl.start()">{{ctrl.results ? 'Recommencer' : 'Commencer'}} la partie</a>
+	</h1>
+
+
+
+	<div class="game" ng-show="ctrl.playing">
+		<morpion></morpion>
+	</div>
+</body>
+</html>
