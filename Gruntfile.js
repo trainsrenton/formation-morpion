@@ -18,7 +18,8 @@ module.exports = function(grunt) {
 		        'node_modules/angular/angular.min.js',
 		    	'app/app.module.js',
 		    	'app/*.component.js',
-		    	'app/*.controller.js'
+		    	'app/*.controller.js',
+                'app/*.directive.js'
 		      ],
 		      dest: 'dist/app.js'
 		    }

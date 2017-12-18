@@ -2,18 +2,19 @@ angular.module('Morpion')
 	.component('morpionCell', {
 		templateUrl: 'morpion-cell.template.html',
 		bindings: {
-			'index': '@'
+			'index': '@',
+            'onMove' : '&',
+            'currentPlayer' : '<'
 		},
-		controller: function($scope, gameData) {
+		controller: function() {
 			var ctrl = this;
 			ctrl.played = false;
 			ctrl.playerClass = '';
 			ctrl.play = () => {
 				if (!ctrl.played) {
 					ctrl.played = true;
-					ctrl.playerClass = gameData.players[gameData.current];
-					gameData.switchPlayer();
-					gameData.values[ctrl.index] = ctrl.playerClass;
+					ctrl.playerClass = ctrl.currentPlayer;
+					ctrl.onMove({index: ctrl.index});
 				} else {
 					console.warn('Impossible de jouer ici...');
 				}
@@ -22,8 +23,13 @@ angular.module('Morpion')
 			ctrl.reset = () => {
                 ctrl.played = false;
                 ctrl.playerClass = '';
-            }
+            };
 
-            $scope.$on('morpion-start', ctrl.reset);
+			ctrl.$onChanges = (changes) => {
+			    if(changes.currentPlayer.currentValue === '' &&
+                    changes.currentPlayer.previousValue){
+			        ctrl.reset();
+                }
+            }
 		}
 	});
